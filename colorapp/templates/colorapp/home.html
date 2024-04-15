@@ -1,0 +1,25 @@
+{% load static %}  <!-- Adicione esta linha no topo do arquivo -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Cores RGB</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container-title">
+        <h1>Identificador de Cores RGB</h1>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+</body>
+</html>
