@@ -1,4 +1,4 @@
-# Sitema de biblioteca
+# Identificador de Cores RGB
 
 ## Sobre
 
